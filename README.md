@@ -1,269 +1,176 @@
-# 🌤️ Weather Forecast API
+# Weather Forecast API
 
-A professional-grade Ruby on Rails application that provides weather forecast data with intelligent caching, built following SOLID principles and industry best practices.
+A professional weather forecast API built with Ruby on Rails, featuring advanced observability, security, and monitoring capabilities.
 
-## ✨ Features
+## 🚀 Features
 
-- **🌡️ Current Weather Data**: Real-time temperature, humidity, pressure, and conditions
-- **📅 Extended Forecast**: 5-day weather predictions with detailed information
-- **⚡ Smart Caching**: 30-minute Redis-based caching to reduce API calls and improve performance
-- **🌍 Global Support**: US ZIP codes and Canadian postal codes
-- **🔧 RESTful API**: Clean, documented endpoints with proper error handling
-- **✅ Production Ready**: Comprehensive test coverage, SOLID principles, and scalable architecture
-- **📱 Responsive UI**: Modern, mobile-friendly web interface
-- **🔍 Cache Management**: Real-time cache status and manual cache clearing
+### Core Functionality
+- **Current Weather** - Real-time weather data for any location
+- **Extended Forecast** - 5-day weather forecast with detailed information
+- **Complete Forecast** - Combined current and extended forecast data
+- **Cache Management** - Redis-based caching with intelligent cache invalidation
 
-## 🚀 Quick Start
+### Professional Features
+- **Observability** - Structured logging, metrics tracking, and performance monitoring
+- **Security** - Rate limiting, input validation, and security event logging
+- **Monitoring** - Real-time metrics endpoint with response time analytics
+- **Scalability** - Redis-based architecture for high-performance caching
+
+## 🏗️ Architecture
+
+### Design Patterns
+- **Facade Pattern** - `WeatherForecastService` provides a simple interface to complex weather operations
+- **Single Responsibility** - Each service handles one specific concern
+- **Concerns** - Reusable modules for cross-cutting concerns (rate limiting, metrics, validation)
+
+### Technology Stack
+- **Ruby on Rails 7.2.2.2** - Web framework
+- **PostgreSQL** - Primary database
+- **Redis** - Caching and metrics storage
+- **Docker** - Containerized development environment
+- **OpenWeather API** - External weather data source
+
+## 📊 Observability & Monitoring
+
+### Structured Logging
+```ruby
+Rails.logger.info("WeatherService: Successfully fetched weather for zip_code=#{zip_code}, response_time=#{response_time}ms")
+```
+
+### Real-time Metrics
+- Request counting and response time tracking
+- Status code monitoring
+- Endpoint usage analytics
+- Performance metrics (p95, average, min, max)
+
+### Security Features
+- Rate limiting (100 requests/hour per IP)
+- Input validation and sanitization
+- Security event logging
+- Attack prevention
+
+## 🛠️ Development Setup
 
 ### Prerequisites
+- Docker and Docker Compose
+- Git
 
-- Ruby 3.0+
-- Rails 7.2+
-- PostgreSQL
-- Redis
-- OpenWeather API key
-
-### Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone <repository-url>
-   cd weather_forecast
-   ```
-
-2. **Install dependencies**
-   ```bash
-   bundle install
-   ```
-
-3. **Setup database**
-   ```bash
-   rails db:create
-   rails db:migrate
-   ```
-
-4. **Configure environment variables**
-   ```bash
-   # Create .env file with:
-   OPENWEATHER_API_KEY=your_api_key_here
-   OPENWEATHER_BASE_URL=https://api.openweathermap.org/data/2.5
-   REDIS_URL=redis://localhost:6379/0
-   ```
-
-5. **Start the application**
-   ```bash
-   rails server
-   ```
-
-6. **Visit the application**
-   - Web Interface: http://localhost:3000
-   - API Health: http://localhost:3000/api/v1/health
-
-## 📚 API Documentation
-
-### Base URL
-```
-http://localhost:3000/api/v1
-```
-
-### Endpoints
-
-#### Get Current Weather
-```http
-GET /api/v1/weather/current/:zip_code
-```
-
-**Example:**
+### Quick Start
 ```bash
-curl http://localhost:3000/api/v1/weather/current/10001
+# Clone the repository
+git clone https://github.com/thierryfro/weather_forecast.git
+cd weather_forecast
+
+# Start the application
+docker compose up -d
+
+# The application will be available at:
+# - Web Interface: http://localhost:3000
+# - API: http://localhost:3000/api/v1/
 ```
 
-**Response:**
+### Environment Configuration
+Create a `.env` file with your OpenWeather API key:
+```env
+OPENWEATHER_API_KEY=your_api_key_here
+```
+
+## 📡 API Endpoints
+
+### Weather Endpoints
+- `GET /api/v1/weather/current/:zip_code` - Current weather
+- `GET /api/v1/weather/forecast/:zip_code` - Extended forecast
+- `GET /api/v1/weather/complete/:zip_code` - Complete forecast
+- `GET /api/v1/weather/cache_status/:zip_code` - Cache status
+- `DELETE /api/v1/weather/cache/:zip_code` - Clear cache
+
+### System Endpoints
+- `GET /api/v1/health` - Health check
+- `GET /api/v1/metrics` - System metrics
+
+### Web Interface
+- `GET /` - Weather forecast web interface
+- `POST /search` - Search weather by zip code
+- `DELETE /clear_cache` - Clear application cache
+
+## 📈 Metrics Example
+
 ```json
 {
   "success": true,
-  "message": "Current weather data retrieved successfully",
   "data": {
-    "current": {
-      "temperature": 20.5,
-      "feels_like": 22.0,
-      "humidity": 65,
-      "pressure": 1013,
-      "description": "clear sky",
-      "icon": "01d"
+    "requests": 7,
+    "response_times": {
+      "count": 1,
+      "average": 1.79,
+      "min": 1.79,
+      "max": 1.79,
+      "p95": 1.79
     },
-    "location": {
-      "name": "New York",
-      "country": "US",
-      "zip_code": "10001"
+    "status_codes": {
+      "200": 1
     },
-    "timestamp": "2024-01-15T10:30:00Z",
-    "cached": false
+    "endpoints": {
+      "/api/v1/health": 1
+    }
   }
 }
 ```
 
-#### Get Extended Forecast
-```http
-GET /api/v1/weather/forecast/:zip_code
-```
+## 🔧 Production Features
 
-#### Get Complete Weather Data
-```http
-GET /api/v1/weather/complete/:zip_code
-```
+### Observability
+- Structured logging with context
+- Real-time performance metrics
+- Error tracking and monitoring
+- Business metrics tracking
 
-#### Check Cache Status
-```http
-GET /api/v1/weather/cache_status/:zip_code
-```
+### Security
+- Rate limiting with Redis
+- Input validation and sanitization
+- Security event logging
+- Attack prevention mechanisms
 
-#### Clear Cache
-```http
-DELETE /api/v1/weather/cache/:zip_code
-```
-
-#### Health Check
-```http
-GET /api/v1/health
-```
-
-## 🏗️ Architecture
-
-### Service Layer (SOLID Principles)
-
-#### WeatherService
-- **Single Responsibility**: Handles external API communication
-- **Open/Closed**: Extensible for different weather providers
-- **Dependency Inversion**: Uses HTTParty for HTTP requests
-
-#### CacheService
-- **Strategy Pattern**: Pluggable cache backends
-- **Single Responsibility**: Manages Redis caching operations
-- **Interface Segregation**: Clean, focused methods
-
-#### WeatherForecastService
-- **Facade Pattern**: Simple interface for complex operations
-- **Open/Closed**: Extensible for new weather data types
-- **Dependency Inversion**: Depends on abstractions, not concretions
-
-### Caching Strategy
-
-- **Cache Duration**: 30 minutes for all weather data
-- **Cache Keys**: `weather:{type}:{zip_code}`
-- **Cache Indicators**: All responses include cache status
-- **Cache Management**: Manual clearing and status checking
-
-### Error Handling
-
-- **Graceful Degradation**: API errors don't crash the application
-- **User-Friendly Messages**: Clear error messages for different scenarios
-- **Logging**: Comprehensive error logging for debugging
-- **Status Codes**: Proper HTTP status codes for different error types
+### Scalability
+- Redis-based caching
+- Efficient data storage
+- Real-time monitoring
+- Horizontal scaling support
 
 ## 🧪 Testing
 
-### Test Coverage
-- **Unit Tests**: All services and models
-- **Integration Tests**: API endpoints and controllers
-- **Request Tests**: Full HTTP request/response cycles
-- **Mocking**: External API calls are mocked for reliable testing
-
-### Running Tests
 ```bash
-# Run all tests
-bundle exec rspec
+# Run tests
+docker compose exec web bundle exec rspec
 
 # Run with coverage
-bundle exec rspec --format documentation
-
-# Run specific test files
-bundle exec rspec spec/services/weather_service_spec.rb
+docker compose exec web bundle exec rspec --format documentation
 ```
 
-### Test Structure
-```
-spec/
-├── controllers/          # Controller tests
-├── services/            # Service layer tests
-├── requests/            # API integration tests
-└── support/            # Test configuration
-```
+## 📝 Code Quality
 
-## 🔧 Configuration
-
-### Environment Variables
-
-| Variable | Description | Default |
-|----------|-------------|---------|
-| `OPENWEATHER_API_KEY` | OpenWeather API key | Required |
-| `OPENWEATHER_BASE_URL` | OpenWeather API base URL | `https://api.openweathermap.org/data/2.5` |
-| `REDIS_URL` | Redis connection URL | `redis://localhost:6379/0` |
-| `RAILS_ENV` | Rails environment | `development` |
-
-### Supported ZIP Code Formats
-
-- **US ZIP Codes**: `12345`, `12345-6789`
-- **Canadian Postal Codes**: `K1A 0A6`
-
-## 📊 Performance
-
-### Caching Benefits
-- **Reduced API Calls**: 30-minute cache reduces external API usage
-- **Faster Response Times**: Cached data returns in milliseconds
-- **Cost Efficiency**: Fewer API calls mean lower costs
-- **Reliability**: Cached data available even if external API is down
-
-### Scalability
-- **Horizontal Scaling**: Stateless application design
-- **Database Optimization**: Efficient queries and indexing
-- **Redis Clustering**: Support for Redis cluster deployment
-- **Load Balancing**: API-ready for load balancer deployment
+- **RuboCop** - Code style enforcement
+- **RSpec** - Comprehensive test suite
+- **CI/CD** - GitHub Actions workflow
+- **Docker** - Consistent development environment
 
 ## 🚀 Deployment
 
-### Production Considerations
-
-1. **Environment Variables**: Set all required environment variables
-2. **Database**: Configure PostgreSQL for production
-3. **Redis**: Set up Redis cluster for high availability
-4. **Monitoring**: Implement health checks and monitoring
-5. **Security**: Configure CORS and rate limiting
-6. **SSL**: Use HTTPS in production
-
-### Docker Support
-```dockerfile
-# Dockerfile included for containerized deployment
-# Supports multi-stage builds for production optimization
-```
-
-## 🤝 Contributing
-
-### Development Setup
-1. Fork the repository
-2. Create a feature branch
-3. Write tests for new functionality
-4. Ensure all tests pass
-5. Submit a pull request
-
-### Code Standards
-- **Ruby Style**: Follow Ruby style guide
-- **Rails Conventions**: Follow Rails best practices
-- **SOLID Principles**: Maintain clean architecture
-- **Test Coverage**: Maintain high test coverage
-- **Documentation**: Document all public methods
+The application is production-ready with:
+- Docker containerization
+- Environment-based configuration
+- Redis for caching and metrics
+- PostgreSQL for data persistence
+- Comprehensive monitoring
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License.
 
-## 🙏 Acknowledgments
+## 👨‍💻 Author
 
-- **OpenWeather API** for weather data
-- **Ruby on Rails** community for excellent framework
-- **Redis** for fast caching solution
-- **RSpec** for comprehensive testing framework
+**Thierry Froes** - [@thierryfro](https://github.com/thierryfro)
 
 ---
 
-**Built with ❤️ using Ruby on Rails, Redis, and modern web technologies.**
+**Professional Rails API with Enterprise-grade Observability and Security** 🚀
