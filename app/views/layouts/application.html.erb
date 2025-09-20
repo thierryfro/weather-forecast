@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Weather Forecast API</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        color: #333;
+      }
+      
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      
+      .header {
+        text-align: center;
+        margin-bottom: 40px;
+        color: white;
+      }
+      
+      .header h1 {
+        font-size: 3rem;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+      }
+      
+      .header p {
+        font-size: 1.2rem;
+        opacity: 0.9;
+      }
+      
+      .card {
+        background: white;
+        border-radius: 20px;
+        padding: 30px;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        margin-bottom: 30px;
+      }
+      
+      .search-form {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 30px;
+        flex-wrap: wrap;
+      }
+      
+      .search-input {
+        flex: 1;
+        min-width: 200px;
+        padding: 15px 20px;
+        border: 2px solid #e1e5e9;
+        border-radius: 50px;
+        font-size: 16px;
+        transition: all 0.3s ease;
+      }
+      
+      .search-input:focus {
+        outline: none;
+        border-color: #667eea;
+        box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+      }
+      
+      .btn {
+        padding: 15px 30px;
+        border: none;
+        border-radius: 50px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        display: inline-block;
+        text-align: center;
+      }
+      
+      .btn-primary {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+      }
+      
+      .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+      }
+      
+      .btn-danger {
+        background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+        color: white;
+      }
+      
+      .btn-danger:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(255, 107, 107, 0.3);
+      }
+      
+      .weather-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        margin-bottom: 30px;
+      }
+      
+      .weather-card {
+        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        color: white;
+        padding: 25px;
+        border-radius: 15px;
+        text-align: center;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      }
+      
+      .weather-card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+      }
+      
+      .weather-temp {
+        font-size: 3rem;
+        font-weight: bold;
+        margin: 15px 0;
+      }
+      
+      .weather-details {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin-top: 20px;
+      }
+      
+      .weather-detail {
+        background: rgba(255,255,255,0.2);
+        padding: 10px;
+        border-radius: 10px;
+        font-size: 0.9rem;
+      }
+      
+      .cache-indicator {
+        background: rgba(255, 193, 7, 0.2);
+        border: 2px solid #ffc107;
+        color: #856404;
+        padding: 10px 15px;
+        border-radius: 10px;
+        margin: 15px 0;
+        font-weight: 600;
+      }
+      
+      .error-message {
+        background: #f8d7da;
+        color: #721c24;
+        padding: 15px;
+        border-radius: 10px;
+        margin: 20px 0;
+        border: 1px solid #f5c6cb;
+      }
+      
+      .alert {
+        padding: 15px;
+        border-radius: 10px;
+        margin: 20px 0;
+        font-weight: 600;
+      }
+      
+      .alert-success {
+        background: #d4edda;
+        color: #155724;
+        border: 1px solid #c3e6cb;
+      }
+      
+      .alert-danger {
+        background: #f8d7da;
+        color: #721c24;
+        border: 1px solid #f5c6cb;
+      }
+      
+      .forecast-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+        margin-top: 20px;
+      }
+      
+      .forecast-item {
+        background: rgba(255,255,255,0.1);
+        padding: 15px;
+        border-radius: 10px;
+        text-align: center;
+      }
+      
+      .api-info {
+        background: rgba(255,255,255,0.1);
+        padding: 20px;
+        border-radius: 15px;
+        margin-top: 30px;
+        color: white;
+      }
+      
+      .api-info h3 {
+        margin-bottom: 15px;
+      }
+      
+      .api-endpoints {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
+        margin-top: 15px;
+      }
+      
+      .api-endpoint {
+        background: rgba(255,255,255,0.1);
+        padding: 15px;
+        border-radius: 10px;
+        font-family: monospace;
+        font-size: 0.9rem;
+      }
+      
+      @media (max-width: 768px) {
+        .header h1 {
+          font-size: 2rem;
+        }
+        
+        .search-form {
+          flex-direction: column;
+        }
+        
+        .weather-grid {
+          grid-template-columns: 1fr;
+        }
+        
+        .weather-details {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>🌤️ Weather Forecast API</h1>
+        <p>Professional Weather Data with Intelligent Caching</p>
+      </div>
+
+      <% if notice %>
+        <div class="alert alert-success"><%= notice %></div>
+      <% end %>
+
+      <% if alert %>
+        <div class="alert alert-danger"><%= alert %></div>
+      <% end %>
+
+      <%= yield %>
+
+      <div class="api-info">
+        <h3>🔗 API Endpoints</h3>
+        <p>This application provides a RESTful API for weather data with intelligent caching.</p>
+        <div class="api-endpoints">
+          <div class="api-endpoint">
+            <strong>GET</strong> /api/v1/weather/current/:zip_code<br>
+            Current weather data
+          </div>
+          <div class="api-endpoint">
+            <strong>GET</strong> /api/v1/weather/forecast/:zip_code<br>
+            Extended forecast
+          </div>
+          <div class="api-endpoint">
+            <strong>GET</strong> /api/v1/weather/complete/:zip_code<br>
+            Complete weather data
+          </div>
+          <div class="api-endpoint">
+            <strong>GET</strong> /api/v1/weather/cache_status/:zip_code<br>
+            Cache status
+          </div>
+          <div class="api-endpoint">
+            <strong>DELETE</strong> /api/v1/weather/cache/:zip_code<br>
+            Clear cache
+          </div>
+          <div class="api-endpoint">
+            <strong>GET</strong> /api/v1/health<br>
+            System health check
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

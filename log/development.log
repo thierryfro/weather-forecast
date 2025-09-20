@@ -1,0 +1,1518 @@
+  [1m[35m (172.1ms)[0m  [1m[35mCREATE DATABASE "weather_forecast_development" ENCODING = 'unicode'[0m
+  [1m[35m (46.6ms)[0m  [1m[35mCREATE DATABASE "weather_forecast_test" ENCODING = 'unicode'[0m
+Started GET "/" for 127.0.0.1 at 2025-09-17 15:03:43 -0400
+  [1m[35m (12.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+Completed 204 No Content in 4ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-09-17 15:04:09 -0400
+Processing by HomeController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  [1m[35m (40.1ms)[0m  [1m[35mCREATE DATABASE "weather_forecast_development" ENCODING = 'unicode'[0m
+  [1m[35m (8.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3162146602037695230)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-09-17 19:15:53.271937', '2025-09-17 19:15:53.271940') RETURNING "key"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(3162146602037695230)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-17 19:15:56 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (10.6ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 23ms (Views: 0.3ms | ActiveRecord: 13.1ms (1 query, 0 cached) | GC: 0.6ms)
+
+
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-17 19:16:26 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-17 19:16:56 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-17 19:17:26 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-17 19:17:56 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-17 19:18:26 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-17 19:18:56 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-17 19:19:26 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-17 19:19:56 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-17 19:20:26 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/api/v1/health" for 151.101.94.132 at 2025-09-17 19:20:27 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-17 19:20:56 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 151.101.94.132 at 2025-09-17 19:21:15 +0000
+Processing by HomeController#index as */*
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/health" for 151.101.94.132 at 2025-09-17 19:21:23 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-17 19:21:26 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 151.101.94.132 at 2025-09-17 19:21:27 +0000
+Processing by HomeController#index as */*
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/health" for 151.101.94.132 at 2025-09-17 19:21:42 +0000
+Processing by Api::V1::HealthController#index as HTML
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/favicon.ico" for 151.101.94.132 at 2025-09-17 19:21:42 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/" for 151.101.94.132 at 2025-09-17 19:21:50 +0000
+Processing by HomeController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-17 19:21:56 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-17 19:22:26 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 151.101.94.132 at 2025-09-17 19:22:54 +0000
+Processing by HomeController#index as */*
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-17 19:22:56 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  [1m[35m (13.3ms)[0m  [1m[35mCREATE DATABASE "weather_forecast_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3162146602037695230)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(3162146602037695230)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-17 19:23:21 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (9.6ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 15ms (Views: 0.2ms | ActiveRecord: 12.1ms (1 query, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-17 19:23:51 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 151.101.94.132 at 2025-09-17 19:24:14 +0000
+Processing by HomeController#index as */*
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | GC: 0.0ms)
+Completed 200 OK in 11ms (Views: 6.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/" for 151.101.94.132 at 2025-09-17 19:24:18 +0000
+Processing by HomeController#index as */*
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.8ms | GC: 0.0ms)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-17 19:24:21 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 151.101.94.132 at 2025-09-17 19:24:26 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/search" for 151.101.94.132 at 2025-09-17 19:24:40 +0000
+Processing by HomeController#search as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "zip_code"=>"79823440", "commit"=>"Get Weather"}
+Redirected to http://localhost:3000/?zip_code=79823440
+Completed 302 Found in 9ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/?zip_code=79823440" for 151.101.94.132 at 2025-09-17 19:24:40 +0000
+Processing by HomeController#index as HTML
+  Parameters: {"zip_code"=>"79823440"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | GC: 0.0ms)
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/search" for 151.101.94.132 at 2025-09-17 19:24:51 +0000
+Processing by HomeController#search as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "zip_code"=>"33596", "commit"=>"Get Weather"}
+Redirected to http://localhost:3000/?zip_code=33596
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/?zip_code=33596" for 151.101.94.132 at 2025-09-17 19:24:51 +0000
+Processing by HomeController#index as HTML
+  Parameters: {"zip_code"=>"33596"}
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-17 19:24:51 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 7.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | GC: 0.0ms)
+Completed 200 OK in 1097ms (Views: 10.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-17 19:25:21 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-17 19:25:51 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-17 19:26:21 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-17 19:26:51 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-17 19:27:21 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-17 19:27:51 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-17 19:28:22 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-17 19:28:52 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-17 19:29:22 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-17 19:29:52 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-17 19:30:22 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-17 19:30:52 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (13.7ms)[0m  [1m[35mCREATE DATABASE "weather_forecast_development" ENCODING = 'unicode'[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3162146602037695230)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(3162146602037695230)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-17 19:31:19 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (9.1ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 11ms (Views: 0.2ms | ActiveRecord: 11.4ms (1 query, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/api/v1/health" for 151.101.94.132 at 2025-09-17 19:31:40 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/weather/current/10001" for 151.101.94.132 at 2025-09-17 19:31:42 +0000
+Processing by Api::V1::WeatherController#current as */*
+  Parameters: {"zip_code"=>"10001"}
+Completed 401 Unauthorized in 531ms (Views: 0.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-17 19:31:49 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-17 19:32:19 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-17 19:32:49 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (20.4ms)[0m  [1m[35mCREATE DATABASE "weather_forecast_development" ENCODING = 'unicode'[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3162146602037695230)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(3162146602037695230)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (12.9ms)[0m  [1m[35mCREATE DATABASE "weather_forecast_development" ENCODING = 'unicode'[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3162146602037695230)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(3162146602037695230)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (12.8ms)[0m  [1m[35mCREATE DATABASE "weather_forecast_development" ENCODING = 'unicode'[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3162146602037695230)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3162146602037695230)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (16.8ms)[0m  [1m[35mCREATE DATABASE "weather_forecast_development" ENCODING = 'unicode'[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3162146602037695230)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-09-17 19:35:36.842780', '2025-09-17 19:35:36.842783') RETURNING "key"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(3162146602037695230)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (14.2ms)[0m  [1m[35mCREATE DATABASE "weather_forecast_development" ENCODING = 'unicode'[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3162146602037695230)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(3162146602037695230)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-17 19:36:22 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (10.2ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 15ms (Views: 0.2ms | ActiveRecord: 12.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/health" for 151.101.94.132 at 2025-09-17 19:36:39 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/weather/current/10001" for 151.101.94.132 at 2025-09-17 19:36:41 +0000
+Processing by Api::V1::WeatherController#current as */*
+  Parameters: {"zip_code"=>"10001"}
+Completed 401 Unauthorized in 580ms (Views: 0.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-17 19:36:52 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-17 19:37:22 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-17 19:37:52 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-17 19:38:22 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/?zip_code=33596" for 151.101.94.132 at 2025-09-17 19:38:42 +0000
+Processing by HomeController#index as HTML
+  Parameters: {"zip_code"=>"33596"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 10.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | GC: 0.0ms)
+Completed 200 OK in 1311ms (Views: 17.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/?zip_code=33596" for 151.101.94.132 at 2025-09-17 19:38:46 +0000
+Processing by HomeController#index as HTML
+  Parameters: {"zip_code"=>"33596"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | GC: 0.0ms)
+Completed 200 OK in 1097ms (Views: 5.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/?zip_code=33596" for 151.101.94.132 at 2025-09-17 19:38:50 +0000
+Processing by HomeController#index as HTML
+  Parameters: {"zip_code"=>"33596"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | GC: 0.0ms)
+Completed 200 OK in 1261ms (Views: 4.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/favicon.ico" for 151.101.94.132 at 2025-09-17 19:38:51 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-17 19:38:52 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 151.101.94.132 at 2025-09-17 19:38:57 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/search" for 151.101.94.132 at 2025-09-17 19:39:15 +0000
+Processing by HomeController#search as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "zip_code"=>"33596", "commit"=>"Get Weather"}
+Redirected to http://localhost:3000/?zip_code=33596
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/?zip_code=33596" for 151.101.94.132 at 2025-09-17 19:39:15 +0000
+Processing by HomeController#index as HTML
+  Parameters: {"zip_code"=>"33596"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | GC: 0.0ms)
+Completed 200 OK in 1148ms (Views: 4.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 151.101.94.132 at 2025-09-17 19:39:21 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-17 19:39:23 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-17 19:39:53 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-17 19:40:23 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-17 19:40:53 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-17 19:41:23 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (36.8ms)[0m  [1m[35mCREATE DATABASE "weather_forecast_development" ENCODING = 'unicode'[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3162146602037695230)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(3162146602037695230)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-20 08:35:52 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (12.2ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 15ms (Views: 0.4ms | ActiveRecord: 15.6ms (1 query, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-20 08:36:23 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-20 08:36:53 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/" for 151.101.94.132 at 2025-09-20 08:37:04 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 6.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | GC: 0.0ms)
+Completed 200 OK in 14ms (Views: 10.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/search" for 151.101.94.132 at 2025-09-20 08:37:09 +0000
+Processing by HomeController#search as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "zip_code"=>"33596", "commit"=>"Get Weather"}
+Redirected to http://localhost:3000/?zip_code=33596
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/?zip_code=33596" for 151.101.94.132 at 2025-09-20 08:37:09 +0000
+Processing by HomeController#index as HTML
+  Parameters: {"zip_code"=>"33596"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 3.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | GC: 0.0ms)
+Completed 200 OK in 1220ms (Views: 6.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-20 08:37:23 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/search" for 151.101.94.132 at 2025-09-20 08:37:28 +0000
+Processing by HomeController#search as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "zip_code"=>"79823440", "commit"=>"Get Weather"}
+Redirected to http://localhost:3000/?zip_code=79823440
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/?zip_code=79823440" for 151.101.94.132 at 2025-09-20 08:37:28 +0000
+Processing by HomeController#index as HTML
+  Parameters: {"zip_code"=>"79823440"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | GC: 0.0ms)
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-20 08:37:53 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/search" for 151.101.94.132 at 2025-09-20 08:37:56 +0000
+Processing by HomeController#search as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "zip_code"=>"33590", "commit"=>"Get Weather"}
+Redirected to http://localhost:3000/?zip_code=33590
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/?zip_code=33590" for 151.101.94.132 at 2025-09-20 08:37:56 +0000
+Processing by HomeController#index as HTML
+  Parameters: {"zip_code"=>"33590"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | GC: 0.0ms)
+Completed 200 OK in 1054ms (Views: 5.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/search" for 151.101.94.132 at 2025-09-20 08:38:08 +0000
+Processing by HomeController#search as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "zip_code"=>"33596", "commit"=>"Get Weather"}
+Redirected to http://localhost:3000/?zip_code=33596
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/?zip_code=33596" for 151.101.94.132 at 2025-09-20 08:38:08 +0000
+Processing by HomeController#index as HTML
+  Parameters: {"zip_code"=>"33596"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | GC: 0.0ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-20 08:38:23 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 151.101.94.132 at 2025-09-20 08:38:25 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started DELETE "/clear_cache" for 151.101.94.132 at 2025-09-20 08:38:39 +0000
+Processing by HomeController#clear_cache as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "zip_code"=>"33596", "commit"=>"🗑️ Clear Cache"}
+Redirected to http://localhost:3000/?zip_code=33596
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/?zip_code=33596" for 151.101.94.132 at 2025-09-20 08:38:39 +0000
+Processing by HomeController#index as HTML
+  Parameters: {"zip_code"=>"33596"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | GC: 0.0ms)
+Completed 200 OK in 1203ms (Views: 4.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 151.101.94.132 at 2025-09-20 08:38:40 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-20 08:38:53 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-20 08:39:23 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-20 08:39:53 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-20 08:40:23 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/?zip_code=33596" for 151.101.94.132 at 2025-09-20 08:40:50 +0000
+Processing by HomeController#index as HTML
+  Parameters: {"zip_code"=>"33596"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.5ms | GC: 0.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | GC: 0.2ms)
+Completed 200 OK in 6ms (Views: 3.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 151.101.94.132 at 2025-09-20 08:40:50 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/favicon.ico" for 151.101.94.132 at 2025-09-20 08:40:50 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-20 08:40:53 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/?zip_code=33596" for 151.101.94.132 at 2025-09-20 08:41:17 +0000
+Processing by HomeController#index as HTML
+  Parameters: {"zip_code"=>"33596"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.4ms | GC: 0.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | GC: 0.1ms)
+Completed 200 OK in 6ms (Views: 3.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 151.101.94.132 at 2025-09-20 08:41:17 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-20 08:41:23 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/?zip_code=33596" for 151.101.94.132 at 2025-09-20 08:41:33 +0000
+Processing by HomeController#index as HTML
+  Parameters: {"zip_code"=>"33596"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.3ms | GC: 0.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | GC: 0.1ms)
+Completed 200 OK in 6ms (Views: 3.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 151.101.94.132 at 2025-09-20 08:41:33 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/?zip_code=33596" for 151.101.94.132 at 2025-09-20 08:41:41 +0000
+Processing by HomeController#index as HTML
+  Parameters: {"zip_code"=>"33596"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.4ms | GC: 0.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | GC: 0.1ms)
+Completed 200 OK in 6ms (Views: 3.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 151.101.94.132 at 2025-09-20 08:41:41 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-20 08:41:53 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/?zip_code=33596" for 151.101.94.132 at 2025-09-20 08:42:04 +0000
+Processing by HomeController#index as HTML
+  Parameters: {"zip_code"=>"33596"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.3ms | GC: 0.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | GC: 0.1ms)
+Completed 200 OK in 5ms (Views: 3.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 151.101.94.132 at 2025-09-20 08:42:04 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/favicon.ico" for 151.101.94.132 at 2025-09-20 08:42:04 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-20 08:42:23 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/?zip_code=33596" for 151.101.94.132 at 2025-09-20 08:42:33 +0000
+Processing by HomeController#index as HTML
+  Parameters: {"zip_code"=>"33596"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | GC: 0.0ms)
+Completed 200 OK in 5ms (Views: 3.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 151.101.94.132 at 2025-09-20 08:42:33 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/favicon.ico" for 151.101.94.132 at 2025-09-20 08:42:33 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/?zip_code=33596" for 151.101.94.132 at 2025-09-20 08:42:49 +0000
+Processing by HomeController#index as HTML
+  Parameters: {"zip_code"=>"33596"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | GC: 0.0ms)
+Completed 200 OK in 6ms (Views: 3.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 151.101.94.132 at 2025-09-20 08:42:49 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/favicon.ico" for 151.101.94.132 at 2025-09-20 08:42:50 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-20 08:42:53 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/?zip_code=33596" for 151.101.94.132 at 2025-09-20 08:43:07 +0000
+Processing by HomeController#index as HTML
+  Parameters: {"zip_code"=>"33596"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | GC: 0.0ms)
+Completed 200 OK in 6ms (Views: 3.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 151.101.94.132 at 2025-09-20 08:43:07 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-20 08:43:23 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-20 08:43:53 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-20 08:44:23 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 151.101.94.132 at 2025-09-20 08:44:49 +0000
+Processing by HomeController#index as */*
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.5ms | GC: 0.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | GC: 0.2ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-20 08:44:54 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/?zip_code=33596" for 151.101.94.132 at 2025-09-20 08:44:58 +0000
+Processing by HomeController#index as HTML
+  Parameters: {"zip_code"=>"33596"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | GC: 0.0ms)
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 151.101.94.132 at 2025-09-20 08:44:58 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started POST "/search" for 151.101.94.132 at 2025-09-20 08:45:03 +0000
+Processing by HomeController#search as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "zip_code"=>"33596", "commit"=>"Get Weather"}
+Redirected to http://localhost:3000/?zip_code=33596
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/?zip_code=33596" for 151.101.94.132 at 2025-09-20 08:45:03 +0000
+Processing by HomeController#index as HTML
+  Parameters: {"zip_code"=>"33596"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | GC: 0.0ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 151.101.94.132 at 2025-09-20 08:45:03 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started POST "/search" for 151.101.94.132 at 2025-09-20 08:45:12 +0000
+Processing by HomeController#search as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "zip_code"=>"10001", "commit"=>"Get Weather"}
+Redirected to http://localhost:3000/?zip_code=10001
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/?zip_code=10001" for 151.101.94.132 at 2025-09-20 08:45:12 +0000
+Processing by HomeController#index as HTML
+  Parameters: {"zip_code"=>"10001"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 13.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 16.5ms | GC: 0.0ms)
+Completed 200 OK in 1430ms (Views: 17.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 7.1ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 151.101.94.132 at 2025-09-20 08:45:14 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/?zip_code=10001" for 151.101.94.132 at 2025-09-20 08:45:19 +0000
+Processing by HomeController#index as HTML
+  Parameters: {"zip_code"=>"10001"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.6ms | GC: 0.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | GC: 0.1ms)
+Completed 200 OK in 6ms (Views: 3.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 151.101.94.132 at 2025-09-20 08:45:19 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/favicon.ico" for 151.101.94.132 at 2025-09-20 08:45:19 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/" for 151.101.94.132 at 2025-09-20 08:45:23 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | GC: 0.0ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 151.101.94.132 at 2025-09-20 08:45:23 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-20 08:45:24 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.1ms)
+
+
+Started POST "/search" for 151.101.94.132 at 2025-09-20 08:45:27 +0000
+Processing by HomeController#search as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "zip_code"=>"10001", "commit"=>"Get Weather"}
+Redirected to http://localhost:3000/?zip_code=10001
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/?zip_code=10001" for 151.101.94.132 at 2025-09-20 08:45:27 +0000
+Processing by HomeController#index as HTML
+  Parameters: {"zip_code"=>"10001"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.9ms | GC: 0.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | GC: 0.1ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 151.101.94.132 at 2025-09-20 08:45:27 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started POST "/search" for 151.101.94.132 at 2025-09-20 08:45:34 +0000
+Processing by HomeController#search as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "zip_code"=>"33596", "commit"=>"Get Weather"}
+Redirected to http://localhost:3000/?zip_code=33596
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/?zip_code=33596" for 151.101.94.132 at 2025-09-20 08:45:34 +0000
+Processing by HomeController#index as HTML
+  Parameters: {"zip_code"=>"33596"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | GC: 0.0ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 151.101.94.132 at 2025-09-20 08:45:34 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-20 08:45:54 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-20 08:46:24 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 151.101.94.132 at 2025-09-20 08:46:29 +0000
+Processing by HomeController#index as */*
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | GC: 0.0ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/weather/current/10001" for 151.101.94.132 at 2025-09-20 08:46:33 +0000
+Processing by Api::V1::WeatherController#current as */*
+  Parameters: {"zip_code"=>"10001"}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/?zip_code=10001" for 151.101.94.132 at 2025-09-20 08:46:35 +0000
+Processing by HomeController#index as */*
+  Parameters: {"zip_code"=>"10001"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.3ms)
+
+
+[dotenv] Loaded [33m.env[0m
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-20 08:46:54 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/?zip_code=10001" for 151.101.94.132 at 2025-09-20 08:47:02 +0000
+Processing by HomeController#index as */*
+  Parameters: {"zip_code"=>"10001"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | GC: 0.2ms)
+Completed 200 OK in 7ms (Views: 3.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/?zip_code=10001" for 151.101.94.132 at 2025-09-20 08:47:04 +0000
+Processing by HomeController#index as */*
+  Parameters: {"zip_code"=>"10001"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | GC: 0.0ms)
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/?zip_code=10001" for 151.101.94.132 at 2025-09-20 08:47:06 +0000
+Processing by HomeController#index as */*
+  Parameters: {"zip_code"=>"10001"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/?zip_code=10001" for 151.101.94.132 at 2025-09-20 08:47:10 +0000
+Processing by HomeController#index as */*
+  Parameters: {"zip_code"=>"10001"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | GC: 0.0ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+[dotenv] Loaded [33m.env[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-20 08:47:24 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/?zip_code=10001" for 151.101.94.132 at 2025-09-20 08:47:41 +0000
+Processing by HomeController#index as */*
+  Parameters: {"zip_code"=>"10001"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.3ms | GC: 0.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | GC: 0.1ms)
+Completed 200 OK in 6ms (Views: 3.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.2ms)
+
+
+[dotenv] Loaded [33m.env[0m
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-20 08:47:54 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/?zip_code=10001" for 151.101.94.132 at 2025-09-20 08:47:54 +0000
+Processing by HomeController#index as */*
+  Parameters: {"zip_code"=>"10001"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | GC: 0.1ms)
+Completed 200 OK in 7ms (Views: 3.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/?zip_code=33596" for 151.101.94.132 at 2025-09-20 08:48:11 +0000
+Processing by HomeController#index as HTML
+  Parameters: {"zip_code"=>"33596"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.4ms | GC: 0.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | GC: 0.1ms)
+Completed 200 OK in 6ms (Views: 3.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 151.101.94.132 at 2025-09-20 08:48:11 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/favicon.ico" for 151.101.94.132 at 2025-09-20 08:48:11 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started DELETE "/clear_cache" for 151.101.94.132 at 2025-09-20 08:48:20 +0000
+Processing by HomeController#clear_cache as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "zip_code"=>"33596", "commit"=>"🗑️ Clear Cache"}
+Redirected to http://localhost:3000/?zip_code=33596
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/?zip_code=33596" for 151.101.94.132 at 2025-09-20 08:48:20 +0000
+Processing by HomeController#index as HTML
+  Parameters: {"zip_code"=>"33596"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | GC: 0.0ms)
+Completed 200 OK in 1286ms (Views: 5.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.8ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 151.101.94.132 at 2025-09-20 08:48:21 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-20 08:48:24 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/search" for 151.101.94.132 at 2025-09-20 08:48:29 +0000
+Processing by HomeController#search as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "zip_code"=>"33596", "commit"=>"Get Weather"}
+Redirected to http://localhost:3000/?zip_code=33596
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/?zip_code=33596" for 151.101.94.132 at 2025-09-20 08:48:29 +0000
+Processing by HomeController#index as HTML
+  Parameters: {"zip_code"=>"33596"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | GC: 0.0ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 151.101.94.132 at 2025-09-20 08:48:29 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-20 08:48:54 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+[dotenv] Loaded [33m.env[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/?zip_code=10001" for 151.101.94.132 at 2025-09-20 08:49:22 +0000
+Processing by HomeController#index as */*
+  Parameters: {"zip_code"=>"10001"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 5.5ms | GC: 0.9ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | GC: 0.9ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `strftime' for "2025-09-20T09:00:00.000+00:00":String
+Did you mean?  strip):
+
+Causes:
+NoMethodError (undefined method `strftime' for "2025-09-20T09:00:00.000+00:00":String
+Did you mean?  strip)
+    65:           <div class="forecast-list">
+    66:             <% @weather_data.dig(:forecast, 'forecast')&.first(5)&.each do |forecast| %>
+    67:               <div class="forecast-item">
+    68:                 <strong><%= forecast['datetime']&.strftime('%H:%M') %></strong><br>
+    69:                 <div style="font-size: 1.5rem; margin: 10px 0;">
+    70:                   <%= forecast['temperature'] %>°C
+    71:                 </div>
+  
+app/views/home/index.html.erb:68
+app/views/home/index.html.erb:66:in `each'
+app/views/home/index.html.erb:66
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-20 08:49:24 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/?zip_code=10001" for 151.101.94.132 at 2025-09-20 08:49:24 +0000
+Processing by HomeController#index as */*
+  Parameters: {"zip_code"=>"10001"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.0ms | GC: 0.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | GC: 0.1ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `strftime' for "2025-09-20T09:00:00.000+00:00":String
+Did you mean?  strip):
+
+Causes:
+NoMethodError (undefined method `strftime' for "2025-09-20T09:00:00.000+00:00":String
+Did you mean?  strip)
+    65:           <div class="forecast-list">
+    66:             <% @weather_data.dig(:forecast, 'forecast')&.first(5)&.each do |forecast| %>
+    67:               <div class="forecast-item">
+    68:                 <strong><%= forecast['datetime']&.strftime('%H:%M') %></strong><br>
+    69:                 <div style="font-size: 1.5rem; margin: 10px 0;">
+    70:                   <%= forecast['temperature'] %>°C
+    71:                 </div>
+  
+app/views/home/index.html.erb:68
+app/views/home/index.html.erb:66:in `each'
+app/views/home/index.html.erb:66
+Started GET "/?zip_code=10001" for 151.101.94.132 at 2025-09-20 08:49:36 +0000
+Processing by HomeController#index as */*
+  Parameters: {"zip_code"=>"10001"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.3ms | GC: 0.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | GC: 0.1ms)
+Completed 200 OK in 7ms (Views: 4.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/?zip_code=33596" for 151.101.94.132 at 2025-09-20 08:49:44 +0000
+Processing by HomeController#index as HTML
+  Parameters: {"zip_code"=>"33596"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.6ms | GC: 0.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | GC: 0.1ms)
+Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 151.101.94.132 at 2025-09-20 08:49:44 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/favicon.ico" for 151.101.94.132 at 2025-09-20 08:49:44 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-20 08:49:54 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/?zip_code=10001" for 151.101.94.132 at 2025-09-20 08:49:59 +0000
+Processing by HomeController#index as HTML
+  Parameters: {"zip_code"=>"10001"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.0ms | GC: 0.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | GC: 0.1ms)
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 151.101.94.132 at 2025-09-20 08:49:59 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started DELETE "/clear_cache" for 151.101.94.132 at 2025-09-20 08:50:08 +0000
+Processing by HomeController#clear_cache as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "zip_code"=>"10001", "commit"=>"🗑️ Clear Cache"}
+Redirected to http://localhost:3000/?zip_code=10001
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/?zip_code=10001" for 151.101.94.132 at 2025-09-20 08:50:08 +0000
+Processing by HomeController#index as HTML
+  Parameters: {"zip_code"=>"10001"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.5ms | GC: 0.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | GC: 0.3ms)
+Completed 200 OK in 1359ms (Views: 5.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.9ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 151.101.94.132 at 2025-09-20 08:50:10 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-20 08:50:24 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-20 08:50:54 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-20 08:51:24 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-20 08:51:55 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-20 08:52:25 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-20 08:52:55 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-20 08:53:25 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-20 08:53:55 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.2ms)
+
+

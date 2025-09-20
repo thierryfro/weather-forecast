@@ -1,0 +1,114 @@
+<div class="card">
+  <h2>🔍 Weather Search</h2>
+  <%= form_with url: search_path, method: :post, local: true, class: "search-form" do |form| %>
+    <%= form.text_field :zip_code, 
+        placeholder: "Enter ZIP code (e.g., 10001, K1A 0A6)", 
+        value: @zip_code,
+        class: "search-input" %>
+    <%= form.submit "Get Weather", class: "btn btn-primary" %>
+  <% end %>
+</div>
+
+<% if @error_message %>
+  <div class="error-message">
+    <strong>Error:</strong> <%= @error_message %>
+  </div>
+<% end %>
+
+<% if @weather_data %>
+  <div class="card">
+    <h2>🌤️ Weather Data for <%= @weather_data.dig(:location, :name) || @zip_code %></h2>
+    
+    <% if @cache_status %>
+      <div class="cache-indicator">
+        📊 Cache Status: 
+        Current: <%= @cache_status[:current_cached] ? '✅ Cached' : '❌ Not cached' %> | 
+        Forecast: <%= @cache_status[:forecast_cached] ? '✅ Cached' : '❌ Not cached' %>
+      </div>
+    <% end %>
+
+    <div class="weather-grid">
+      <% if @weather_data[:current] && !@weather_data[:current][:error] %>
+        <div class="weather-card">
+          <h3>🌡️ Current Weather</h3>
+          <div class="weather-temp">
+            <%= @weather_data.dig(:current, 'current', 'temperature') %>°C
+          </div>
+          <p style="font-size: 1.2rem; margin: 10px 0;">
+            <%= @weather_data.dig(:current, 'current', 'description')&.titleize %>
+          </p>
+          <div class="weather-details">
+            <div class="weather-detail">
+              <strong>Feels like:</strong><br>
+              <%= @weather_data.dig(:current, 'current', 'feels_like') %>°C
+            </div>
+            <div class="weather-detail">
+              <strong>Humidity:</strong><br>
+              <%= @weather_data.dig(:current, 'current', 'humidity') %>%
+            </div>
+            <div class="weather-detail">
+              <strong>Pressure:</strong><br>
+              <%= @weather_data.dig(:current, 'current', 'pressure') %> hPa
+            </div>
+            <div class="weather-detail">
+              <strong>Location:</strong><br>
+              <%= @weather_data.dig(:current, 'location', 'name') %>, 
+              <%= @weather_data.dig(:current, 'location', 'country') %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+
+      <% if @weather_data[:forecast] && !@weather_data[:forecast]['error'] %>
+        <div class="weather-card">
+          <h3>📅 Extended Forecast</h3>
+          <div class="forecast-list">
+            <% @weather_data.dig(:forecast, 'forecast')&.first(5)&.each do |forecast| %>
+              <div class="forecast-item">
+                <strong><%= Time.parse(forecast['datetime']).strftime('%H:%M') rescue forecast['datetime'] %></strong><br>
+                <div style="font-size: 1.5rem; margin: 10px 0;">
+                  <%= forecast['temperature'] %>°C
+                </div>
+                <div style="font-size: 0.9rem;">
+                  <%= forecast['description']&.titleize %>
+                </div>
+                <div style="font-size: 0.8rem; margin-top: 5px; opacity: 0.8;">
+                  H: <%= forecast['humidity'] %>% | P: <%= forecast['pressure'] %> hPa
+                </div>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+    <div style="margin-top: 20px; text-align: center;">
+      <%= form_with url: clear_cache_path, method: :delete, local: true do |form| %>
+        <%= form.hidden_field :zip_code, value: @zip_code %>
+        <%= form.submit "🗑️ Clear Cache", class: "btn btn-danger" %>
+      <% end %>
+    </div>
+  </div>
+<% end %>
+
+<div class="card">
+  <h2>🚀 Features</h2>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 20px;">
+    <div style="padding: 20px; background: #f8f9fa; border-radius: 10px;">
+      <h3 style="color: #667eea; margin-bottom: 10px;">⚡ Smart Caching</h3>
+      <p>30-minute intelligent cache reduces API calls and improves performance.</p>
+    </div>
+    <div style="padding: 20px; background: #f8f9fa; border-radius: 10px;">
+      <h3 style="color: #667eea; margin-bottom: 10px;">🌍 Global Support</h3>
+      <p>Supports US ZIP codes and Canadian postal codes with comprehensive weather data.</p>
+    </div>
+    <div style="padding: 20px; background: #f8f9fa; border-radius: 10px;">
+      <h3 style="color: #667eea; margin-bottom: 10px;">🔧 RESTful API</h3>
+      <p>Clean, documented API endpoints with proper error handling and status codes.</p>
+    </div>
+    <div style="padding: 20px; background: #f8f9fa; border-radius: 10px;">
+      <h3 style="color: #667eea; margin-bottom: 10px;">✅ Production Ready</h3>
+      <p>Built with Ruby on Rails, Redis caching, comprehensive tests, and SOLID principles.</p>
+    </div>
+  </div>
+</div>
