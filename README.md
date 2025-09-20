@@ -169,7 +169,7 @@ This project is licensed under the MIT License.
 
 ## 👨‍💻 Author
 
-**Thierry Froes** - [@thierryfro](https://github.com/thierryfro)
+**Thierry Oliveira** - [@thierryfro](https://github.com/thierryfro)
 
 ---
 
