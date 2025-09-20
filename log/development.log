@@ -1537,3 +1537,222 @@ Processing by Api::V1::HealthController#index as */*
 Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.1ms)
 
 
+Started GET "/" for 151.101.94.132 at 2025-09-20 08:55:54 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.2ms | GC: 0.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | GC: 0.1ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 151.101.94.132 at 2025-09-20 08:55:54 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-20 08:55:55 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-20 08:56:25 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-20 08:56:55 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-20 08:57:25 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-20 08:57:55 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-20 08:58:25 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-20 08:58:55 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-20 08:59:25 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-20 08:59:56 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-20 09:00:26 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 500 Internal Server Error in 3ms (Views: 0.1ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.6ms)
+
+
+  
+NoMethodError (undefined method `lpush' for #<ActiveSupport::Cache::NullStore options={:compress=>true, :compress_threshold=>1024}>
+
+      Rails.cache.lpush("#{metrics_key}:response_times", response_time)
+                 ^^^^^^):
+  
+app/controllers/concerns/metrics_tracker.rb:23:in `track_request_metrics'
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (12.9ms)[0m  [1m[35mCREATE DATABASE "weather_forecast_development" ENCODING = 'unicode'[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3162146602037695230)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(3162146602037695230)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-20 09:00:32 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (10.3ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 500 Internal Server Error in 14ms (Views: 0.2ms | ActiveRecord: 13.0ms (1 query, 0 cached) | GC: 0.3ms)
+
+
+  
+NoMethodError (undefined method `lpush' for #<ActiveSupport::Cache::NullStore options={:compress=>true, :compress_threshold=>1024}>
+
+      Rails.cache.lpush("#{metrics_key}:response_times", response_time)
+                 ^^^^^^):
+  
+app/controllers/concerns/metrics_tracker.rb:23:in `track_request_metrics'
+Started GET "/api/v1/metrics" for 151.101.94.132 at 2025-09-20 09:00:39 +0000
+Processing by Api::V1::MetricsController#index as */*
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+NoMethodError (undefined method `lrange' for #<ActiveSupport::Cache::NullStore options={:compress=>true, :compress_threshold=>1024}>
+
+    times = Rails.cache.lrange("#{metrics_key}:response_times", 0, -1).map(&:to_f)
+                       ^^^^^^^):
+  
+app/controllers/api/v1/metrics_controller.rb:25:in `get_response_time_stats'
+app/controllers/api/v1/metrics_controller.rb:13:in `index'
+Started GET "/api/v1/metrics" for 151.101.94.132 at 2025-09-20 09:00:44 +0000
+Processing by Api::V1::MetricsController#index as */*
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+NoMethodError (undefined method `lrange' for #<ActiveSupport::Cache::NullStore options={:compress=>true, :compress_threshold=>1024}>
+
+    times = Rails.cache.lrange("#{metrics_key}:response_times", 0, -1).map(&:to_f)
+                       ^^^^^^^):
+  
+app/controllers/api/v1/metrics_controller.rb:25:in `get_response_time_stats'
+app/controllers/api/v1/metrics_controller.rb:13:in `index'
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-20 09:01:02 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 500 Internal Server Error in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+NoMethodError (undefined method `lpush' for #<ActiveSupport::Cache::NullStore options={:compress=>true, :compress_threshold=>1024}>
+
+      Rails.cache.lpush("#{metrics_key}:response_times", response_time)
+                 ^^^^^^):
+  
+app/controllers/concerns/metrics_tracker.rb:23:in `track_request_metrics'
+Started GET "/api/v1/metrics" for 151.101.94.132 at 2025-09-20 09:01:14 +0000
+Processing by Api::V1::MetricsController#index as */*
+Error calculating response time stats: undefined method `lrange' for #<ActiveSupport::Cache::NullStore options={:compress=>true, :compress_threshold=>1024}>
+
+    times = Rails.cache.lrange("#{metrics_key}:response_times", 0, -1).map(&:to_f)
+                       ^^^^^^^
+Completed 500 Internal Server Error in 5ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.3ms)
+
+
+  
+NoMethodError (undefined method `lpush' for #<ActiveSupport::Cache::NullStore options={:compress=>true, :compress_threshold=>1024}>
+
+      Rails.cache.lpush("#{metrics_key}:response_times", response_time)
+                 ^^^^^^):
+  
+app/controllers/concerns/metrics_tracker.rb:23:in `track_request_metrics'
+Started GET "/api/v1/health" for 127.0.0.1 at 2025-09-20 09:01:32 +0000
+Processing by Api::V1::HealthController#index as */*
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT 1[0m
+  ↳ app/controllers/api/v1/health_controller.rb:27:in `database_status'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/metrics" for 151.101.94.132 at 2025-09-20 09:01:33 +0000
+Processing by Api::V1::MetricsController#index as */*
+Completed 200 OK in 24ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/api/v1/weather/current/12345" for 151.101.94.132 at 2025-09-20 09:01:35 +0000
+Processing by Api::V1::WeatherController#current as */*
+  Parameters: {"zip_code"=>"12345"}
+WeatherService: Fetching current weather for zip_code=12345
+WeatherService: Successfully fetched weather for zip_code=12345, response_time=0.764850834ms
+Completed 200 OK in 773ms (Views: 0.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/api/v1/weather/current/12345" for 151.101.94.132 at 2025-09-20 09:01:36 +0000
+Processing by Api::V1::WeatherController#current as */*
+  Parameters: {"zip_code"=>"12345"}
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/weather/current/12345" for 151.101.94.132 at 2025-09-20 09:01:36 +0000
+Processing by Api::V1::WeatherController#current as */*
+  Parameters: {"zip_code"=>"12345"}
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/weather/current/12345" for 151.101.94.132 at 2025-09-20 09:01:36 +0000
+Processing by Api::V1::WeatherController#current as */*
+  Parameters: {"zip_code"=>"12345"}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/weather/current/12345" for 151.101.94.132 at 2025-09-20 09:01:36 +0000
+Processing by Api::V1::WeatherController#current as */*
+  Parameters: {"zip_code"=>"12345"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/metrics" for 151.101.94.132 at 2025-09-20 09:01:37 +0000
+Processing by Api::V1::MetricsController#index as */*
+Completed 200 OK in 27ms (Views: 0.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.3ms)
+
+

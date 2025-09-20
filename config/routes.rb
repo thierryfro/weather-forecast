@@ -15,8 +15,9 @@ Rails.application.routes.draw do
       get 'weather/cache_status/:zip_code', to: 'weather#cache_status'
       delete 'weather/cache/:zip_code', to: 'weather#clear_cache'
       
-      # Health check for API
+      # System monitoring endpoints
       get 'health', to: 'health#index'
+      get 'metrics', to: 'metrics#index'
     end
   end
 

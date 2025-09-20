@@ -8,26 +8,38 @@ class WeatherService
   default_params appid: ENV.fetch('OPENWEATHER_API_KEY', 'test_key')
 
   def self.current_weather(zip_code)
+    start_time = Time.current
+    Rails.logger.info("WeatherService: Fetching current weather for zip_code=#{zip_code}")
+    
     response = get('/weather', query: { zip: zip_code, units: 'metric' })
     
     if response.success?
+      Rails.logger.info("WeatherService: Successfully fetched weather for zip_code=#{zip_code}, response_time=#{Time.current - start_time}ms")
       parse_weather_response(response.parsed_response)
     else
+      Rails.logger.error("WeatherService: API error for zip_code=#{zip_code}, status=#{response.code}, message=#{response.dig('message')}")
       handle_api_error(response)
     end
   rescue StandardError => e
+    Rails.logger.error("WeatherService: Unexpected error for zip_code=#{zip_code}, error=#{e.class.name}, message=#{e.message}")
     handle_error(e)
   end
 
   def self.forecast(zip_code)
+    start_time = Time.current
+    Rails.logger.info("WeatherService: Fetching forecast for zip_code=#{zip_code}")
+    
     response = get('/forecast', query: { zip: zip_code, units: 'metric' })
     
     if response.success?
+      Rails.logger.info("WeatherService: Successfully fetched forecast for zip_code=#{zip_code}, response_time=#{Time.current - start_time}ms")
       parse_forecast_response(response.parsed_response)
     else
+      Rails.logger.error("WeatherService: API error for zip_code=#{zip_code}, status=#{response.code}, message=#{response.dig('message')}")
       handle_api_error(response)
     end
   rescue StandardError => e
+    Rails.logger.error("WeatherService: Unexpected error for zip_code=#{zip_code}, error=#{e.class.name}, message=#{e.message}")
     handle_error(e)
   end
 

@@ -69,11 +69,13 @@ class Api::V1::WeatherController < ApplicationController
     @zip_code = params[:zip_code]
     
     if @zip_code.blank?
+      Rails.logger.warn("API: Missing zip_code parameter from IP=#{request.remote_ip}")
       render_error('Zip code parameter is required', 400)
       return
     end
     
     unless valid_zip_code?(@zip_code)
+      Rails.logger.warn("API: Invalid zip_code format=#{@zip_code} from IP=#{request.remote_ip}")
       render_error('Invalid zip code format', 400)
       return
     end
